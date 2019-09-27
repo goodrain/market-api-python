@@ -41,6 +41,7 @@ class Order(object):
         'delivery_mode': 'str',
         'delivery_time': 'datetime',
         'eid': 'str',
+        'expire_date': 'datetime',
         'final_fee': 'float',
         'finish_time': 'datetime',
         'id': 'str',
@@ -59,6 +60,7 @@ class Order(object):
         'delivery_mode': 'delivery_mode',
         'delivery_time': 'delivery_time',
         'eid': 'eid',
+        'expire_date': 'expire_date',
         'final_fee': 'final_fee',
         'finish_time': 'finish_time',
         'id': 'id',
@@ -70,7 +72,7 @@ class Order(object):
         'user_id': 'user_id'
     }
 
-    def __init__(self, app=None, cancel_time=None, create_time=None, delivery_mode=None, delivery_time=None, eid=None, final_fee=None, finish_time=None, id=None, pay_time=None, pid=None, ptype=None, state=None, svc_provider=None, user_id=None):  # noqa: E501
+    def __init__(self, app=None, cancel_time=None, create_time=None, delivery_mode=None, delivery_time=None, eid=None, expire_date=None, final_fee=None, finish_time=None, id=None, pay_time=None, pid=None, ptype=None, state=None, svc_provider=None, user_id=None):  # noqa: E501
         """Order - a model defined in Swagger"""  # noqa: E501
 
         self._app = None
@@ -79,6 +81,7 @@ class Order(object):
         self._delivery_mode = None
         self._delivery_time = None
         self._eid = None
+        self._expire_date = None
         self._final_fee = None
         self._finish_time = None
         self._id = None
@@ -102,6 +105,8 @@ class Order(object):
             self.delivery_time = delivery_time
         if eid is not None:
             self.eid = eid
+        if expire_date is not None:
+            self.expire_date = expire_date
         if final_fee is not None:
             self.final_fee = final_fee
         if finish_time is not None:
@@ -246,6 +251,27 @@ class Order(object):
         """
 
         self._eid = eid
+
+    @property
+    def expire_date(self):
+        """Gets the expire_date of this Order.  # noqa: E501
+
+
+        :return: The expire_date of this Order.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._expire_date
+
+    @expire_date.setter
+    def expire_date(self, expire_date):
+        """Sets the expire_date of this Order.
+
+
+        :param expire_date: The expire_date of this Order.  # noqa: E501
+        :type: datetime
+        """
+
+        self._expire_date = expire_date
 
     @property
     def final_fee(self):

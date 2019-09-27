@@ -89,6 +89,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [AppListResponse](docs/AppListResponse.md)
+ - [DeliveryMode](docs/DeliveryMode.md)
  - [DeployType](docs/DeployType.md)
  - [Enterprise](docs/Enterprise.md)
  - [ImageInfo](docs/ImageInfo.md)

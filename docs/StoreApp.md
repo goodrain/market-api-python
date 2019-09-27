@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **app_versions** | [**list[StoreAppVersion]**](StoreAppVersion.md) |  | [optional] 
 **code_page** | **str** |  | [optional] 
 **create_time** | **datetime** |  | [optional] 
+**delivery_mode** | [**list[DeliveryMode]**](DeliveryMode.md) |  | [optional] 
 **desc** | **str** |  | [optional] 
 **download_count** | **int** |  | [optional] 
 **enterprise** | [**Enterprise**](Enterprise.md) |  | [optional] 

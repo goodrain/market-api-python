@@ -16,6 +16,7 @@ from __future__ import absolute_import
 
 # import models into model package
 from market_client.models.app_list_response import AppListResponse
+from market_client.models.delivery_mode import DeliveryMode
 from market_client.models.deploy_type import DeployType
 from market_client.models.enterprise import Enterprise
 from market_client.models.image_info import ImageInfo

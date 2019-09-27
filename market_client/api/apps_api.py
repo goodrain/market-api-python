@@ -95,7 +95,7 @@ class AppsApi(object):
 
         path_params = {}
         if 'order_id' in params:
-            path_params['order_id'] = params['order_id']  # noqa: E501
+            path_params['orderID'] = params['order_id']  # noqa: E501
 
         query_params = []
 

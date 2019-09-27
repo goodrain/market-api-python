@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **delivery_mode** | **str** |  | [optional] 
 **delivery_time** | **datetime** |  | [optional] 
 **eid** | **str** |  | [optional] 
+**expire_date** | **datetime** |  | [optional] 
 **final_fee** | **float** |  | [optional] 
 **finish_time** | **datetime** |  | [optional] 
 **id** | **str** |  | [optional] 

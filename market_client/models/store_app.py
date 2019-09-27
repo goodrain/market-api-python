@@ -16,6 +16,7 @@ import re  # noqa: F401
 
 import six
 
+from market_client.models.delivery_mode import DeliveryMode  # noqa: F401,E501
 from market_client.models.enterprise import Enterprise  # noqa: F401,E501
 from market_client.models.store_app_tag import StoreAppTag  # noqa: F401,E501
 from market_client.models.store_app_version import StoreAppVersion  # noqa: F401,E501
@@ -43,6 +44,7 @@ class StoreApp(object):
         'app_versions': 'list[StoreAppVersion]',
         'code_page': 'str',
         'create_time': 'datetime',
+        'delivery_mode': 'list[DeliveryMode]',
         'desc': 'str',
         'download_count': 'int',
         'enterprise': 'Enterprise',
@@ -73,6 +75,7 @@ class StoreApp(object):
         'app_versions': 'app_versions',
         'code_page': 'code_page',
         'create_time': 'create_time',
+        'delivery_mode': 'delivery_mode',
         'desc': 'desc',
         'download_count': 'download_count',
         'enterprise': 'enterprise',
@@ -94,7 +97,7 @@ class StoreApp(object):
         'update_time': 'update_time'
     }
 
-    def __init__(self, app_detail_url=None, app_key_id=None, app_tag_ids=None, app_tags=None, app_type_id=None, app_versions=None, code_page=None, create_time=None, desc=None, download_count=None, enterprise=None, enterprise_id=None, home_page=None, install_count=None, install_status=None, introduction=None, is_official=None, joint_cloud_id=None, logo=None, name=None, pic=None, price=None, publish_type=None, show_count=None, start_count=None, status=None, update_time=None):  # noqa: E501
+    def __init__(self, app_detail_url=None, app_key_id=None, app_tag_ids=None, app_tags=None, app_type_id=None, app_versions=None, code_page=None, create_time=None, delivery_mode=None, desc=None, download_count=None, enterprise=None, enterprise_id=None, home_page=None, install_count=None, install_status=None, introduction=None, is_official=None, joint_cloud_id=None, logo=None, name=None, pic=None, price=None, publish_type=None, show_count=None, start_count=None, status=None, update_time=None):  # noqa: E501
         """StoreApp - a model defined in Swagger"""  # noqa: E501
 
         self._app_detail_url = None
@@ -105,6 +108,7 @@ class StoreApp(object):
         self._app_versions = None
         self._code_page = None
         self._create_time = None
+        self._delivery_mode = None
         self._desc = None
         self._download_count = None
         self._enterprise = None
@@ -142,6 +146,8 @@ class StoreApp(object):
             self.code_page = code_page
         if create_time is not None:
             self.create_time = create_time
+        if delivery_mode is not None:
+            self.delivery_mode = delivery_mode
         if desc is not None:
             self.desc = desc
         if download_count is not None:
@@ -348,6 +354,27 @@ class StoreApp(object):
         """
 
         self._create_time = create_time
+
+    @property
+    def delivery_mode(self):
+        """Gets the delivery_mode of this StoreApp.  # noqa: E501
+
+
+        :return: The delivery_mode of this StoreApp.  # noqa: E501
+        :rtype: list[DeliveryMode]
+        """
+        return self._delivery_mode
+
+    @delivery_mode.setter
+    def delivery_mode(self, delivery_mode):
+        """Sets the delivery_mode of this StoreApp.
+
+
+        :param delivery_mode: The delivery_mode of this StoreApp.  # noqa: E501
+        :type: list[DeliveryMode]
+        """
+
+        self._delivery_mode = delivery_mode
 
     @property
     def desc(self):
