@@ -25,6 +25,8 @@ from market_client.configuration import Configuration
 # import models into sdk package
 from market_client.models.access_mode import AccessMode
 from market_client.models.app_list_response import AppListResponse
+from market_client.models.body import Body
+from market_client.models.body1 import Body1
 from market_client.models.delivery_mode import DeliveryMode
 from market_client.models.deploy_type import DeployType
 from market_client.models.enterprise import Enterprise

@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **create_app_version**
-> StoreAppVersion create_app_version(market_id, app_id)
+> StoreAppVersion create_app_version(market_id, app_id, body=body)
 
 
 
@@ -46,9 +46,10 @@ configuration.api_key['X_ENTERPRISE_TOKEN'] = 'YOUR_API_KEY'
 api_instance = market_client.AppsApi(market_client.ApiClient(configuration))
 market_id = 'market_id_example' # str | market id
 app_id = 'app_id_example' # str | app id
+body = market_client.Body1() # Body1 |  (optional)
 
 try:
-    api_response = api_instance.create_app_version(market_id, app_id)
+    api_response = api_instance.create_app_version(market_id, app_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AppsApi->create_app_version: %s\n" % e)
@@ -60,6 +61,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **market_id** | **str**| market id | 
  **app_id** | **str**| app id | 
+ **body** | [**Body1**](Body1.md)|  | [optional] 
 
 ### Return type
 
@@ -77,7 +79,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_enterprise_market_app**
-> ResponseData create_enterprise_market_app(market_id)
+> ResponseData create_enterprise_market_app(market_id, body=body)
 
 
 
@@ -105,9 +107,10 @@ configuration.api_key['X_ENTERPRISE_TOKEN'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = market_client.AppsApi(market_client.ApiClient(configuration))
 market_id = 'market_id_example' # str | market id
+body = market_client.Body() # Body |  (optional)
 
 try:
-    api_response = api_instance.create_enterprise_market_app(market_id)
+    api_response = api_instance.create_enterprise_market_app(market_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AppsApi->create_enterprise_market_app: %s\n" % e)
@@ -118,6 +121,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **market_id** | **str**| market id | 
+ **body** | [**Body**](Body.md)|  | [optional] 
 
 ### Return type
 

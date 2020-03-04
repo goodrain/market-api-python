@@ -45,6 +45,7 @@ class AppsApi(object):
         :param async_req bool
         :param str market_id: market id (required)
         :param str app_id: app id (required)
+        :param Body1 body:
         :return: StoreAppVersion
                  If the method is called asynchronously,
                  returns the request thread.
@@ -68,12 +69,13 @@ class AppsApi(object):
         :param async_req bool
         :param str market_id: market id (required)
         :param str app_id: app id (required)
+        :param Body1 body:
         :return: StoreAppVersion
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['market_id', 'app_id']  # noqa: E501
+        all_params = ['market_id', 'app_id', 'body']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -113,6 +115,8 @@ class AppsApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json', 'Schemes:'])  # noqa: E501
@@ -151,6 +155,7 @@ class AppsApi(object):
 
         :param async_req bool
         :param str market_id: market id (required)
+        :param Body body:
         :return: ResponseData
                  If the method is called asynchronously,
                  returns the request thread.
@@ -173,12 +178,13 @@ class AppsApi(object):
 
         :param async_req bool
         :param str market_id: market id (required)
+        :param Body body:
         :return: ResponseData
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['market_id']  # noqa: E501
+        all_params = ['market_id', 'body']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -212,6 +218,8 @@ class AppsApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json', 'Schemes:'])  # noqa: E501

@@ -67,9 +67,10 @@ configuration.api_key['X_ENTERPRISE_TOKEN'] = 'YOUR_API_KEY'
 api_instance = market_client.AppsApi(market_client.ApiClient(configuration))
 market_id = 'market_id_example' # str | market id
 app_id = 'app_id_example' # str | app id
+body = market_client.Body1() # Body1 |  (optional)
 
 try:
-    api_response = api_instance.create_app_version(market_id, app_id)
+    api_response = api_instance.create_app_version(market_id, app_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AppsApi->create_app_version: %s\n" % e)
@@ -99,6 +100,8 @@ Class | Method | HTTP request | Description
 
  - [AccessMode](docs/AccessMode.md)
  - [AppListResponse](docs/AppListResponse.md)
+ - [Body](docs/Body.md)
+ - [Body1](docs/Body1.md)
  - [DeliveryMode](docs/DeliveryMode.md)
  - [DeployType](docs/DeployType.md)
  - [Enterprise](docs/Enterprise.md)
