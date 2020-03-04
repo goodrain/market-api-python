@@ -17,8 +17,10 @@ import re  # noqa: F401
 import six
 
 from market_client.models.order_app import OrderApp  # noqa: F401,E501
+from market_client.models.order_buyer import OrderBuyer  # noqa: F401,E501
 from market_client.models.order_state import OrderState  # noqa: F401,E501
 from market_client.models.order_svc_provider import OrderSvcProvider  # noqa: F401,E501
+from market_client.models.order_type import OrderType  # noqa: F401,E501
 
 
 class Order(object):
@@ -36,6 +38,7 @@ class Order(object):
     """
     swagger_types = {
         'app': 'OrderApp',
+        'buyer': 'OrderBuyer',
         'cancel_time': 'datetime',
         'create_time': 'datetime',
         'delivery_mode': 'str',
@@ -50,11 +53,12 @@ class Order(object):
         'ptype': 'str',
         'state': 'OrderState',
         'svc_provider': 'OrderSvcProvider',
-        'user_id': 'str'
+        'type': 'OrderType'
     }
 
     attribute_map = {
         'app': 'app',
+        'buyer': 'buyer',
         'cancel_time': 'cancel_time',
         'create_time': 'create_time',
         'delivery_mode': 'delivery_mode',
@@ -69,13 +73,14 @@ class Order(object):
         'ptype': 'ptype',
         'state': 'state',
         'svc_provider': 'svc_provider',
-        'user_id': 'user_id'
+        'type': 'type'
     }
 
-    def __init__(self, app=None, cancel_time=None, create_time=None, delivery_mode=None, delivery_time=None, eid=None, expire_date=None, final_fee=None, finish_time=None, id=None, pay_time=None, pid=None, ptype=None, state=None, svc_provider=None, user_id=None):  # noqa: E501
+    def __init__(self, app=None, buyer=None, cancel_time=None, create_time=None, delivery_mode=None, delivery_time=None, eid=None, expire_date=None, final_fee=None, finish_time=None, id=None, pay_time=None, pid=None, ptype=None, state=None, svc_provider=None, type=None):  # noqa: E501
         """Order - a model defined in Swagger"""  # noqa: E501
 
         self._app = None
+        self._buyer = None
         self._cancel_time = None
         self._create_time = None
         self._delivery_mode = None
@@ -90,11 +95,13 @@ class Order(object):
         self._ptype = None
         self._state = None
         self._svc_provider = None
-        self._user_id = None
+        self._type = None
         self.discriminator = None
 
         if app is not None:
             self.app = app
+        if buyer is not None:
+            self.buyer = buyer
         if cancel_time is not None:
             self.cancel_time = cancel_time
         if create_time is not None:
@@ -123,8 +130,8 @@ class Order(object):
             self.state = state
         if svc_provider is not None:
             self.svc_provider = svc_provider
-        if user_id is not None:
-            self.user_id = user_id
+        if type is not None:
+            self.type = type
 
     @property
     def app(self):
@@ -146,6 +153,27 @@ class Order(object):
         """
 
         self._app = app
+
+    @property
+    def buyer(self):
+        """Gets the buyer of this Order.  # noqa: E501
+
+
+        :return: The buyer of this Order.  # noqa: E501
+        :rtype: OrderBuyer
+        """
+        return self._buyer
+
+    @buyer.setter
+    def buyer(self, buyer):
+        """Sets the buyer of this Order.
+
+
+        :param buyer: The buyer of this Order.  # noqa: E501
+        :type: OrderBuyer
+        """
+
+        self._buyer = buyer
 
     @property
     def cancel_time(self):
@@ -442,25 +470,25 @@ class Order(object):
         self._svc_provider = svc_provider
 
     @property
-    def user_id(self):
-        """Gets the user_id of this Order.  # noqa: E501
+    def type(self):
+        """Gets the type of this Order.  # noqa: E501
 
 
-        :return: The user_id of this Order.  # noqa: E501
-        :rtype: str
+        :return: The type of this Order.  # noqa: E501
+        :rtype: OrderType
         """
-        return self._user_id
+        return self._type
 
-    @user_id.setter
-    def user_id(self, user_id):
-        """Sets the user_id of this Order.
+    @type.setter
+    def type(self, type):
+        """Sets the type of this Order.
 
 
-        :param user_id: The user_id of this Order.  # noqa: E501
-        :type: str
+        :param type: The type of this Order.  # noqa: E501
+        :type: OrderType
         """
 
-        self._user_id = user_id
+        self._type = type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

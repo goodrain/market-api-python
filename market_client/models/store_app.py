@@ -53,9 +53,11 @@ class StoreApp(object):
         'install_count': 'int',
         'install_status': 'bool',
         'introduction': 'str',
+        'introduction_html': 'str',
         'is_official': 'bool',
         'joint_cloud_id': 'str',
         'logo': 'str',
+        'market_id': 'str',
         'name': 'str',
         'pic': 'list[str]',
         'price': 'float',
@@ -84,9 +86,11 @@ class StoreApp(object):
         'install_count': 'install_count',
         'install_status': 'install_status',
         'introduction': 'introduction',
+        'introduction_html': 'introduction_html',
         'is_official': 'is_official',
         'joint_cloud_id': 'joint_cloud_id',
         'logo': 'logo',
+        'market_id': 'market_id',
         'name': 'name',
         'pic': 'pic',
         'price': 'price',
@@ -97,7 +101,7 @@ class StoreApp(object):
         'update_time': 'update_time'
     }
 
-    def __init__(self, app_detail_url=None, app_key_id=None, app_tag_ids=None, app_tags=None, app_type_id=None, app_versions=None, code_page=None, create_time=None, delivery_mode=None, desc=None, download_count=None, enterprise=None, enterprise_id=None, home_page=None, install_count=None, install_status=None, introduction=None, is_official=None, joint_cloud_id=None, logo=None, name=None, pic=None, price=None, publish_type=None, show_count=None, start_count=None, status=None, update_time=None):  # noqa: E501
+    def __init__(self, app_detail_url=None, app_key_id=None, app_tag_ids=None, app_tags=None, app_type_id=None, app_versions=None, code_page=None, create_time=None, delivery_mode=None, desc=None, download_count=None, enterprise=None, enterprise_id=None, home_page=None, install_count=None, install_status=None, introduction=None, introduction_html=None, is_official=None, joint_cloud_id=None, logo=None, market_id=None, name=None, pic=None, price=None, publish_type=None, show_count=None, start_count=None, status=None, update_time=None):  # noqa: E501
         """StoreApp - a model defined in Swagger"""  # noqa: E501
 
         self._app_detail_url = None
@@ -117,9 +121,11 @@ class StoreApp(object):
         self._install_count = None
         self._install_status = None
         self._introduction = None
+        self._introduction_html = None
         self._is_official = None
         self._joint_cloud_id = None
         self._logo = None
+        self._market_id = None
         self._name = None
         self._pic = None
         self._price = None
@@ -164,12 +170,16 @@ class StoreApp(object):
             self.install_status = install_status
         if introduction is not None:
             self.introduction = introduction
+        if introduction_html is not None:
+            self.introduction_html = introduction_html
         if is_official is not None:
             self.is_official = is_official
         if joint_cloud_id is not None:
             self.joint_cloud_id = joint_cloud_id
         if logo is not None:
             self.logo = logo
+        if market_id is not None:
+            self.market_id = market_id
         if name is not None:
             self.name = name
         if pic is not None:
@@ -545,6 +555,27 @@ class StoreApp(object):
         self._introduction = introduction
 
     @property
+    def introduction_html(self):
+        """Gets the introduction_html of this StoreApp.  # noqa: E501
+
+
+        :return: The introduction_html of this StoreApp.  # noqa: E501
+        :rtype: str
+        """
+        return self._introduction_html
+
+    @introduction_html.setter
+    def introduction_html(self, introduction_html):
+        """Sets the introduction_html of this StoreApp.
+
+
+        :param introduction_html: The introduction_html of this StoreApp.  # noqa: E501
+        :type: str
+        """
+
+        self._introduction_html = introduction_html
+
+    @property
     def is_official(self):
         """Gets the is_official of this StoreApp.  # noqa: E501
 
@@ -606,6 +637,27 @@ class StoreApp(object):
         """
 
         self._logo = logo
+
+    @property
+    def market_id(self):
+        """Gets the market_id of this StoreApp.  # noqa: E501
+
+
+        :return: The market_id of this StoreApp.  # noqa: E501
+        :rtype: str
+        """
+        return self._market_id
+
+    @market_id.setter
+    def market_id(self, market_id):
+        """Sets the market_id of this StoreApp.
+
+
+        :param market_id: The market_id of this StoreApp.  # noqa: E501
+        :type: str
+        """
+
+        self._market_id = market_id
 
     @property
     def name(self):

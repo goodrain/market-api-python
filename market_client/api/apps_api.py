@@ -33,6 +33,188 @@ class AppsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
+    def create_app_version(self, **kwargs):  # noqa: E501
+        """create_app_version  # noqa: E501
+
+        create app version  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_app_version(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: StoreAppVersion
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.create_app_version_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.create_app_version_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def create_app_version_with_http_info(self, **kwargs):  # noqa: E501
+        """create_app_version  # noqa: E501
+
+        create app version  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_app_version_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: StoreAppVersion
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_app_version" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json', 'Schemes:'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['enterprise_key', 'token_key']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/openapi/v2/markets/{marketID}/apps/{appID}/versions', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='StoreAppVersion',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def creeate_enterprise_market_app(self, **kwargs):  # noqa: E501
+        """creeate_enterprise_market_app  # noqa: E501
+
+        create app  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.creeate_enterprise_market_app(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: ResponseData
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.creeate_enterprise_market_app_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.creeate_enterprise_market_app_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def creeate_enterprise_market_app_with_http_info(self, **kwargs):  # noqa: E501
+        """creeate_enterprise_market_app  # noqa: E501
+
+        create app  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.creeate_enterprise_market_app_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: ResponseData
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method creeate_enterprise_market_app" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json', 'Schemes:'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['enterprise_key', 'token_key']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/openapi/v2/markets/{marketID}/apps', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ResponseData',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def download_app_by_order(self, order_id, **kwargs):  # noqa: E501
         """download_app_by_order  # noqa: E501
 
@@ -125,6 +307,461 @@ class AppsApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='StoreAppVersion',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_app_version(self, **kwargs):  # noqa: E501
+        """get_app_version  # noqa: E501
+
+        get app specify version  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_app_version(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: StoreAppVersion
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_app_version_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.get_app_version_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def get_app_version_with_http_info(self, **kwargs):  # noqa: E501
+        """get_app_version  # noqa: E501
+
+        get app specify version  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_app_version_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: StoreAppVersion
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_app_version" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json', 'Schemes:'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['enterprise_key', 'token_key']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/openapi/v2/markets/{marketID}/apps/{appID}/versions/{versionID}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='StoreAppVersion',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_app_versions(self, **kwargs):  # noqa: E501
+        """get_app_versions  # noqa: E501
+
+        get app all versions  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_app_versions(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: StoreAppVersion
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_app_versions_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.get_app_versions_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def get_app_versions_with_http_info(self, **kwargs):  # noqa: E501
+        """get_app_versions  # noqa: E501
+
+        get app all versions  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_app_versions_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: StoreAppVersion
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_app_versions" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['enterprise_key', 'token_key']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/openapi/v2/markets/{marketID}/apps/{appID}/versions', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='StoreAppVersion',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_enterprise_market_app_and_version(self, **kwargs):  # noqa: E501
+        """get_enterprise_market_app_and_version  # noqa: E501
+
+        get app  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_enterprise_market_app_and_version(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: StoreApp
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_enterprise_market_app_and_version_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.get_enterprise_market_app_and_version_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def get_enterprise_market_app_and_version_with_http_info(self, **kwargs):  # noqa: E501
+        """get_enterprise_market_app_and_version  # noqa: E501
+
+        get app  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_enterprise_market_app_and_version_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: StoreApp
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_enterprise_market_app_and_version" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json', 'Schemes:'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['enterprise_key', 'token_key']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/openapi/v2/markets/{marketID}/apps/{appID}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='StoreApp',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_enterprise_market_apps_and_versions(self, **kwargs):  # noqa: E501
+        """get_enterprise_market_apps_and_versions  # noqa: E501
+
+        get app list  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_enterprise_market_apps_and_versions(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: AppListResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_enterprise_market_apps_and_versions_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.get_enterprise_market_apps_and_versions_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def get_enterprise_market_apps_and_versions_with_http_info(self, **kwargs):  # noqa: E501
+        """get_enterprise_market_apps_and_versions  # noqa: E501
+
+        get app list  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_enterprise_market_apps_and_versions_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: AppListResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_enterprise_market_apps_and_versions" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json', 'Schemes:'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['enterprise_key', 'token_key']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/openapi/v2/markets/{marketID}/apps', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='AppListResponse',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_enterprise_market_by_market_id(self, **kwargs):  # noqa: E501
+        """get_enterprise_market_by_market_id  # noqa: E501
+
+        get market  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_enterprise_market_by_market_id(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: Market
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_enterprise_market_by_market_id_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.get_enterprise_market_by_market_id_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def get_enterprise_market_by_market_id_with_http_info(self, **kwargs):  # noqa: E501
+        """get_enterprise_market_by_market_id  # noqa: E501
+
+        get market  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_enterprise_market_by_market_id_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: Market
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_enterprise_market_by_market_id" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json', 'Schemes:'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['enterprise_key', 'token_key']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/openapi/v2/markets/{marketID}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Market',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

@@ -39,6 +39,9 @@ class Enterprise(object):
         'enterprise_code': 'str',
         'enterprise_id': 'str',
         'enterprise_market_url': 'str',
+        'enterprise_parent': 'str',
+        'enterprise_type': 'str',
+        'head_user_id': 'str',
         'integral': 'float',
         'logo': 'str',
         'name': 'str',
@@ -54,13 +57,16 @@ class Enterprise(object):
         'enterprise_code': 'enterprise_code',
         'enterprise_id': 'enterprise_id',
         'enterprise_market_url': 'enterprise_market_url',
+        'enterprise_parent': 'enterprise_parent',
+        'enterprise_type': 'enterprise_type',
+        'head_user_id': 'head_user_id',
         'integral': 'integral',
         'logo': 'logo',
         'name': 'name',
         'open_market': 'open_market'
     }
 
-    def __init__(self, address=None, backup_images=None, create_time=None, desc=None, english_name=None, enterprise_code=None, enterprise_id=None, enterprise_market_url=None, integral=None, logo=None, name=None, open_market=None):  # noqa: E501
+    def __init__(self, address=None, backup_images=None, create_time=None, desc=None, english_name=None, enterprise_code=None, enterprise_id=None, enterprise_market_url=None, enterprise_parent=None, enterprise_type=None, head_user_id=None, integral=None, logo=None, name=None, open_market=None):  # noqa: E501
         """Enterprise - a model defined in Swagger"""  # noqa: E501
 
         self._address = None
@@ -71,6 +77,9 @@ class Enterprise(object):
         self._enterprise_code = None
         self._enterprise_id = None
         self._enterprise_market_url = None
+        self._enterprise_parent = None
+        self._enterprise_type = None
+        self._head_user_id = None
         self._integral = None
         self._logo = None
         self._name = None
@@ -93,6 +102,12 @@ class Enterprise(object):
             self.enterprise_id = enterprise_id
         if enterprise_market_url is not None:
             self.enterprise_market_url = enterprise_market_url
+        if enterprise_parent is not None:
+            self.enterprise_parent = enterprise_parent
+        if enterprise_type is not None:
+            self.enterprise_type = enterprise_type
+        if head_user_id is not None:
+            self.head_user_id = head_user_id
         if integral is not None:
             self.integral = integral
         if logo is not None:
@@ -269,6 +284,69 @@ class Enterprise(object):
         """
 
         self._enterprise_market_url = enterprise_market_url
+
+    @property
+    def enterprise_parent(self):
+        """Gets the enterprise_parent of this Enterprise.  # noqa: E501
+
+
+        :return: The enterprise_parent of this Enterprise.  # noqa: E501
+        :rtype: str
+        """
+        return self._enterprise_parent
+
+    @enterprise_parent.setter
+    def enterprise_parent(self, enterprise_parent):
+        """Sets the enterprise_parent of this Enterprise.
+
+
+        :param enterprise_parent: The enterprise_parent of this Enterprise.  # noqa: E501
+        :type: str
+        """
+
+        self._enterprise_parent = enterprise_parent
+
+    @property
+    def enterprise_type(self):
+        """Gets the enterprise_type of this Enterprise.  # noqa: E501
+
+
+        :return: The enterprise_type of this Enterprise.  # noqa: E501
+        :rtype: str
+        """
+        return self._enterprise_type
+
+    @enterprise_type.setter
+    def enterprise_type(self, enterprise_type):
+        """Sets the enterprise_type of this Enterprise.
+
+
+        :param enterprise_type: The enterprise_type of this Enterprise.  # noqa: E501
+        :type: str
+        """
+
+        self._enterprise_type = enterprise_type
+
+    @property
+    def head_user_id(self):
+        """Gets the head_user_id of this Enterprise.  # noqa: E501
+
+
+        :return: The head_user_id of this Enterprise.  # noqa: E501
+        :rtype: str
+        """
+        return self._head_user_id
+
+    @head_user_id.setter
+    def head_user_id(self, head_user_id):
+        """Sets the head_user_id of this Enterprise.
+
+
+        :param head_user_id: The head_user_id of this Enterprise.  # noqa: E501
+        :type: str
+        """
+
+        self._head_user_id = head_user_id
 
     @property
     def integral(self):

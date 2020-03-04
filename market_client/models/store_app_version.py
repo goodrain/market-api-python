@@ -36,6 +36,7 @@ class StoreAppVersion(object):
     swagger_types = {
         'app_key_id': 'str',
         'app_version': 'str',
+        'app_version_alias': 'str',
         'create_time': 'datetime',
         'desc': 'str',
         'rainbond_version': 'str',
@@ -48,6 +49,7 @@ class StoreAppVersion(object):
     attribute_map = {
         'app_key_id': 'app_key_id',
         'app_version': 'app_version',
+        'app_version_alias': 'app_version_alias',
         'create_time': 'create_time',
         'desc': 'desc',
         'rainbond_version': 'rainbond_version',
@@ -57,11 +59,12 @@ class StoreAppVersion(object):
         'update_version': 'update_version'
     }
 
-    def __init__(self, app_key_id=None, app_version=None, create_time=None, desc=None, rainbond_version=None, templete=None, templete_version=None, update_time=None, update_version=None):  # noqa: E501
+    def __init__(self, app_key_id=None, app_version=None, app_version_alias=None, create_time=None, desc=None, rainbond_version=None, templete=None, templete_version=None, update_time=None, update_version=None):  # noqa: E501
         """StoreAppVersion - a model defined in Swagger"""  # noqa: E501
 
         self._app_key_id = None
         self._app_version = None
+        self._app_version_alias = None
         self._create_time = None
         self._desc = None
         self._rainbond_version = None
@@ -75,6 +78,8 @@ class StoreAppVersion(object):
             self.app_key_id = app_key_id
         if app_version is not None:
             self.app_version = app_version
+        if app_version_alias is not None:
+            self.app_version_alias = app_version_alias
         if create_time is not None:
             self.create_time = create_time
         if desc is not None:
@@ -131,6 +136,27 @@ class StoreAppVersion(object):
         """
 
         self._app_version = app_version
+
+    @property
+    def app_version_alias(self):
+        """Gets the app_version_alias of this StoreAppVersion.  # noqa: E501
+
+
+        :return: The app_version_alias of this StoreAppVersion.  # noqa: E501
+        :rtype: str
+        """
+        return self._app_version_alias
+
+    @app_version_alias.setter
+    def app_version_alias(self, app_version_alias):
+        """Sets the app_version_alias of this StoreAppVersion.
+
+
+        :param app_version_alias: The app_version_alias of this StoreAppVersion.  # noqa: E501
+        :type: str
+        """
+
+        self._app_version_alias = app_version_alias
 
     @property
     def create_time(self):

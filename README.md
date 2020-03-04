@@ -65,13 +65,12 @@ configuration.api_key['X_ENTERPRISE_TOKEN'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = market_client.AppsApi(market_client.ApiClient(configuration))
-order_id = 789 # int | an id of order
 
 try:
-    api_response = api_instance.download_app_by_order(order_id)
+    api_response = api_instance.create_app_version()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AppsApi->download_app_by_order: %s\n" % e)
+    print("Exception when calling AppsApi->create_app_version: %s\n" % e)
 
 ```
 
@@ -81,13 +80,21 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AppsApi* | [**create_app_version**](docs/AppsApi.md#create_app_version) | **POST** /openapi/v2/markets/{marketID}/apps/{appID}/versions | 
+*AppsApi* | [**creeate_enterprise_market_app**](docs/AppsApi.md#creeate_enterprise_market_app) | **POST** /openapi/v2/markets/{marketID}/apps | 
 *AppsApi* | [**download_app_by_order**](docs/AppsApi.md#download_app_by_order) | **GET** /openapi/v2/orders/{orderID}/downloadapp | 
+*AppsApi* | [**get_app_version**](docs/AppsApi.md#get_app_version) | **GET** /openapi/v2/markets/{marketID}/apps/{appID}/versions/{versionID} | 
+*AppsApi* | [**get_app_versions**](docs/AppsApi.md#get_app_versions) | **GET** /openapi/v2/markets/{marketID}/apps/{appID}/versions | 
+*AppsApi* | [**get_enterprise_market_app_and_version**](docs/AppsApi.md#get_enterprise_market_app_and_version) | **GET** /openapi/v2/markets/{marketID}/apps/{appID} | 
+*AppsApi* | [**get_enterprise_market_apps_and_versions**](docs/AppsApi.md#get_enterprise_market_apps_and_versions) | **GET** /openapi/v2/markets/{marketID}/apps | 
+*AppsApi* | [**get_enterprise_market_by_market_id**](docs/AppsApi.md#get_enterprise_market_by_market_id) | **GET** /openapi/v2/markets/{marketID} | 
 *AppsApi* | [**get_recommended_app_list**](docs/AppsApi.md#get_recommended_app_list) | **GET** /openapi/v2/recommended/apps | get recommended app list
 *OrdersApi* | [**get_order_request**](docs/OrdersApi.md#get_order_request) | **GET** /openapi/v2/orders/{orderID} | get order infos
 
 
 ## Documentation For Models
 
+ - [AccessMode](docs/AccessMode.md)
  - [AppListResponse](docs/AppListResponse.md)
  - [DeliveryMode](docs/DeliveryMode.md)
  - [DeployType](docs/DeployType.md)
@@ -95,9 +102,11 @@ Class | Method | HTTP request | Description
  - [ImageInfo](docs/ImageInfo.md)
  - [Order](docs/Order.md)
  - [OrderApp](docs/OrderApp.md)
+ - [OrderBuyer](docs/OrderBuyer.md)
  - [OrderInfoResponse](docs/OrderInfoResponse.md)
  - [OrderState](docs/OrderState.md)
  - [OrderSvcProvider](docs/OrderSvcProvider.md)
+ - [OrderType](docs/OrderType.md)
  - [StoreApp](docs/StoreApp.md)
  - [StoreAppTag](docs/StoreAppTag.md)
  - [StoreAppVersion](docs/StoreAppVersion.md)

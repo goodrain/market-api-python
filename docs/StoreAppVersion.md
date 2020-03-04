@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **app_key_id** | **str** |  | [optional] 
 **app_version** | **str** |  | [optional] 
+**app_version_alias** | **str** |  | [optional] 
 **create_time** | **datetime** |  | [optional] 
 **desc** | **str** |  | [optional] 
 **rainbond_version** | **str** |  | [optional] 

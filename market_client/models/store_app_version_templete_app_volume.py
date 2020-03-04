@@ -16,6 +16,7 @@ import re  # noqa: F401
 
 import six
 
+from market_client.models.access_mode import AccessMode  # noqa: F401,E501
 from market_client.models.volume_type import VolumeType  # noqa: F401,E501
 
 
@@ -33,36 +34,67 @@ class StoreAppVersionTempleteAppVolume(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'access_mode': 'AccessMode',
         'file_content': 'str',
+        'volume_capacity': 'int',
         'volume_name': 'str',
         'volume_path': 'str',
         'volume_type': 'VolumeType'
     }
 
     attribute_map = {
+        'access_mode': 'access_mode',
         'file_content': 'file_content',
+        'volume_capacity': 'volume_capacity',
         'volume_name': 'volume_name',
         'volume_path': 'volume_path',
         'volume_type': 'volume_type'
     }
 
-    def __init__(self, file_content=None, volume_name=None, volume_path=None, volume_type=None):  # noqa: E501
+    def __init__(self, access_mode=None, file_content=None, volume_capacity=None, volume_name=None, volume_path=None, volume_type=None):  # noqa: E501
         """StoreAppVersionTempleteAppVolume - a model defined in Swagger"""  # noqa: E501
 
+        self._access_mode = None
         self._file_content = None
+        self._volume_capacity = None
         self._volume_name = None
         self._volume_path = None
         self._volume_type = None
         self.discriminator = None
 
+        if access_mode is not None:
+            self.access_mode = access_mode
         if file_content is not None:
             self.file_content = file_content
+        if volume_capacity is not None:
+            self.volume_capacity = volume_capacity
         if volume_name is not None:
             self.volume_name = volume_name
         if volume_path is not None:
             self.volume_path = volume_path
         if volume_type is not None:
             self.volume_type = volume_type
+
+    @property
+    def access_mode(self):
+        """Gets the access_mode of this StoreAppVersionTempleteAppVolume.  # noqa: E501
+
+
+        :return: The access_mode of this StoreAppVersionTempleteAppVolume.  # noqa: E501
+        :rtype: AccessMode
+        """
+        return self._access_mode
+
+    @access_mode.setter
+    def access_mode(self, access_mode):
+        """Sets the access_mode of this StoreAppVersionTempleteAppVolume.
+
+
+        :param access_mode: The access_mode of this StoreAppVersionTempleteAppVolume.  # noqa: E501
+        :type: AccessMode
+        """
+
+        self._access_mode = access_mode
 
     @property
     def file_content(self):
@@ -86,6 +118,27 @@ class StoreAppVersionTempleteAppVolume(object):
         """
 
         self._file_content = file_content
+
+    @property
+    def volume_capacity(self):
+        """Gets the volume_capacity of this StoreAppVersionTempleteAppVolume.  # noqa: E501
+
+
+        :return: The volume_capacity of this StoreAppVersionTempleteAppVolume.  # noqa: E501
+        :rtype: int
+        """
+        return self._volume_capacity
+
+    @volume_capacity.setter
+    def volume_capacity(self, volume_capacity):
+        """Sets the volume_capacity of this StoreAppVersionTempleteAppVolume.
+
+
+        :param volume_capacity: The volume_capacity of this StoreAppVersionTempleteAppVolume.  # noqa: E501
+        :type: int
+        """
+
+        self._volume_capacity = volume_capacity
 
     @property
     def volume_name(self):

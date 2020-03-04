@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **app** | [**OrderApp**](OrderApp.md) |  | [optional] 
+**buyer** | [**OrderBuyer**](OrderBuyer.md) |  | [optional] 
 **cancel_time** | **datetime** |  | [optional] 
 **create_time** | **datetime** |  | [optional] 
 **delivery_mode** | **str** |  | [optional] 
@@ -18,7 +19,7 @@ Name | Type | Description | Notes
 **ptype** | **str** |  | [optional] 
 **state** | [**OrderState**](OrderState.md) |  | [optional] 
 **svc_provider** | [**OrderSvcProvider**](OrderSvcProvider.md) |  | [optional] 
-**user_id** | **str** |  | [optional] 
+**type** | [**OrderType**](OrderType.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
