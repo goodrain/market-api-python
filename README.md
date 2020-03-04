@@ -67,10 +67,10 @@ configuration.api_key['X_ENTERPRISE_TOKEN'] = 'YOUR_API_KEY'
 api_instance = market_client.AppsApi(market_client.ApiClient(configuration))
 market_id = 'market_id_example' # str | market id
 app_id = 'app_id_example' # str | app id
-app_version = market_client.AppVersion() # AppVersion |  (optional)
+data = market_client.PostAPPTemplete() # PostAPPTemplete |  (optional)
 
 try:
-    api_response = api_instance.create_app_version(market_id, app_id, app_version=app_version)
+    api_response = api_instance.create_app_version(market_id, app_id, data=data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AppsApi->create_app_version: %s\n" % e)
@@ -99,9 +99,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [AccessMode](docs/AccessMode.md)
- - [App](docs/App.md)
  - [AppListResponse](docs/AppListResponse.md)
- - [AppVersion](docs/AppVersion.md)
  - [DeliveryMode](docs/DeliveryMode.md)
  - [DeployType](docs/DeployType.md)
  - [Enterprise](docs/Enterprise.md)
@@ -115,6 +113,7 @@ Class | Method | HTTP request | Description
  - [OrderState](docs/OrderState.md)
  - [OrderSvcProvider](docs/OrderSvcProvider.md)
  - [OrderType](docs/OrderType.md)
+ - [PostAPPTemplete](docs/PostAPPTemplete.md)
  - [StoreApp](docs/StoreApp.md)
  - [StoreAppTag](docs/StoreAppTag.md)
  - [StoreAppVersion](docs/StoreAppVersion.md)

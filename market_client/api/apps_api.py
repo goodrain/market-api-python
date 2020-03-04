@@ -45,7 +45,7 @@ class AppsApi(object):
         :param async_req bool
         :param str market_id: market id (required)
         :param str app_id: app id (required)
-        :param AppVersion app_version:
+        :param PostAPPTemplete data:
         :return: StoreAppVersion
                  If the method is called asynchronously,
                  returns the request thread.
@@ -69,13 +69,13 @@ class AppsApi(object):
         :param async_req bool
         :param str market_id: market id (required)
         :param str app_id: app id (required)
-        :param AppVersion app_version:
+        :param PostAPPTemplete data:
         :return: StoreAppVersion
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['market_id', 'app_id', 'app_version']  # noqa: E501
+        all_params = ['market_id', 'app_id', 'data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -115,8 +115,8 @@ class AppsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'app_version' in params:
-            body_params = params['app_version']
+        if 'data' in params:
+            body_params = params['data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json', 'Schemes:'])  # noqa: E501
@@ -155,7 +155,7 @@ class AppsApi(object):
 
         :param async_req bool
         :param str market_id: market id (required)
-        :param App app:
+        :param PostAPPTemplete data:
         :return: ResponseData
                  If the method is called asynchronously,
                  returns the request thread.
@@ -178,13 +178,13 @@ class AppsApi(object):
 
         :param async_req bool
         :param str market_id: market id (required)
-        :param App app:
+        :param PostAPPTemplete data:
         :return: ResponseData
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['market_id', 'app']  # noqa: E501
+        all_params = ['market_id', 'data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -218,8 +218,8 @@ class AppsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'app' in params:
-            body_params = params['app']
+        if 'data' in params:
+            body_params = params['data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json', 'Schemes:'])  # noqa: E501

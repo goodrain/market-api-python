@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **create_app_version**
-> StoreAppVersion create_app_version(market_id, app_id, app_version=app_version)
+> StoreAppVersion create_app_version(market_id, app_id, data=data)
 
 
 
@@ -46,10 +46,10 @@ configuration.api_key['X_ENTERPRISE_TOKEN'] = 'YOUR_API_KEY'
 api_instance = market_client.AppsApi(market_client.ApiClient(configuration))
 market_id = 'market_id_example' # str | market id
 app_id = 'app_id_example' # str | app id
-app_version = market_client.AppVersion() # AppVersion |  (optional)
+data = market_client.PostAPPTemplete() # PostAPPTemplete |  (optional)
 
 try:
-    api_response = api_instance.create_app_version(market_id, app_id, app_version=app_version)
+    api_response = api_instance.create_app_version(market_id, app_id, data=data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AppsApi->create_app_version: %s\n" % e)
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **market_id** | **str**| market id | 
  **app_id** | **str**| app id | 
- **app_version** | [**AppVersion**](AppVersion.md)|  | [optional] 
+ **data** | [**PostAPPTemplete**](PostAPPTemplete.md)|  | [optional] 
 
 ### Return type
 
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_enterprise_market_app**
-> ResponseData create_enterprise_market_app(market_id, app=app)
+> ResponseData create_enterprise_market_app(market_id, data=data)
 
 
 
@@ -107,10 +107,10 @@ configuration.api_key['X_ENTERPRISE_TOKEN'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = market_client.AppsApi(market_client.ApiClient(configuration))
 market_id = 'market_id_example' # str | market id
-app = market_client.App() # App |  (optional)
+data = market_client.PostAPPTemplete() # PostAPPTemplete |  (optional)
 
 try:
-    api_response = api_instance.create_enterprise_market_app(market_id, app=app)
+    api_response = api_instance.create_enterprise_market_app(market_id, data=data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AppsApi->create_enterprise_market_app: %s\n" % e)
@@ -121,7 +121,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **market_id** | **str**| market id | 
- **app** | [**App**](App.md)|  | [optional] 
+ **data** | [**PostAPPTemplete**](PostAPPTemplete.md)|  | [optional] 
 
 ### Return type
 
