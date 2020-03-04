@@ -29,6 +29,8 @@ from market_client.models.delivery_mode import DeliveryMode
 from market_client.models.deploy_type import DeployType
 from market_client.models.enterprise import Enterprise
 from market_client.models.image_info import ImageInfo
+from market_client.models.market import Market
+from market_client.models.market_list_response import MarketListResponse
 from market_client.models.order import Order
 from market_client.models.order_app import OrderApp
 from market_client.models.order_buyer import OrderBuyer
