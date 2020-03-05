@@ -31,9 +31,11 @@ class PostAPPTemplete(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'app_id': 'str',
+        'app_name': 'str',
+        'describe': 'str',
         'details': 'str',
-        'group_key': 'str',
-        'group_share_alias': 'str',
+        'dev_status': 'str',
         'group_template': 'str',
         'group_version': 'str',
         'group_version_alias': 'str',
@@ -41,16 +43,17 @@ class PostAPPTemplete(object):
         'publish_team': 'str',
         'publish_user': 'str',
         'rainbond_version': 'str',
-        'share_type': 'str',
+        'scope': 'str',
         'template_version': 'str',
-        'tenant_id': 'str',
-        'update_note': 'str'
+        'tenant_id': 'str'
     }
 
     attribute_map = {
+        'app_id': 'app_id',
+        'app_name': 'app_name',
+        'describe': 'describe',
         'details': 'details',
-        'group_key': 'group_key',
-        'group_share_alias': 'group_share_alias',
+        'dev_status': 'dev_status',
         'group_template': 'group_template',
         'group_version': 'group_version',
         'group_version_alias': 'group_version_alias',
@@ -58,18 +61,19 @@ class PostAPPTemplete(object):
         'publish_team': 'publish_team',
         'publish_user': 'publish_user',
         'rainbond_version': 'rainbond_version',
-        'share_type': 'share_type',
+        'scope': 'scope',
         'template_version': 'template_version',
-        'tenant_id': 'tenant_id',
-        'update_note': 'update_note'
+        'tenant_id': 'tenant_id'
     }
 
-    def __init__(self, details=None, group_key=None, group_share_alias=None, group_template=None, group_version=None, group_version_alias=None, logo=None, publish_team=None, publish_user=None, rainbond_version=None, share_type=None, template_version=None, tenant_id=None, update_note=None):  # noqa: E501
+    def __init__(self, app_id=None, app_name=None, describe=None, details=None, dev_status=None, group_template=None, group_version=None, group_version_alias=None, logo=None, publish_team=None, publish_user=None, rainbond_version=None, scope=None, template_version=None, tenant_id=None):  # noqa: E501
         """PostAPPTemplete - a model defined in Swagger"""  # noqa: E501
 
+        self._app_id = None
+        self._app_name = None
+        self._describe = None
         self._details = None
-        self._group_key = None
-        self._group_share_alias = None
+        self._dev_status = None
         self._group_template = None
         self._group_version = None
         self._group_version_alias = None
@@ -77,18 +81,21 @@ class PostAPPTemplete(object):
         self._publish_team = None
         self._publish_user = None
         self._rainbond_version = None
-        self._share_type = None
+        self._scope = None
         self._template_version = None
         self._tenant_id = None
-        self._update_note = None
         self.discriminator = None
 
+        if app_id is not None:
+            self.app_id = app_id
+        if app_name is not None:
+            self.app_name = app_name
+        if describe is not None:
+            self.describe = describe
         if details is not None:
             self.details = details
-        if group_key is not None:
-            self.group_key = group_key
-        if group_share_alias is not None:
-            self.group_share_alias = group_share_alias
+        if dev_status is not None:
+            self.dev_status = dev_status
         if group_template is not None:
             self.group_template = group_template
         if group_version is not None:
@@ -103,14 +110,75 @@ class PostAPPTemplete(object):
             self.publish_user = publish_user
         if rainbond_version is not None:
             self.rainbond_version = rainbond_version
-        if share_type is not None:
-            self.share_type = share_type
+        if scope is not None:
+            self.scope = scope
         if template_version is not None:
             self.template_version = template_version
         if tenant_id is not None:
             self.tenant_id = tenant_id
-        if update_note is not None:
-            self.update_note = update_note
+
+    @property
+    def app_id(self):
+        """Gets the app_id of this PostAPPTemplete.  # noqa: E501
+
+
+        :return: The app_id of this PostAPPTemplete.  # noqa: E501
+        :rtype: str
+        """
+        return self._app_id
+
+    @app_id.setter
+    def app_id(self, app_id):
+        """Sets the app_id of this PostAPPTemplete.
+
+
+        :param app_id: The app_id of this PostAPPTemplete.  # noqa: E501
+        :type: str
+        """
+
+        self._app_id = app_id
+
+    @property
+    def app_name(self):
+        """Gets the app_name of this PostAPPTemplete.  # noqa: E501
+
+
+        :return: The app_name of this PostAPPTemplete.  # noqa: E501
+        :rtype: str
+        """
+        return self._app_name
+
+    @app_name.setter
+    def app_name(self, app_name):
+        """Sets the app_name of this PostAPPTemplete.
+
+
+        :param app_name: The app_name of this PostAPPTemplete.  # noqa: E501
+        :type: str
+        """
+
+        self._app_name = app_name
+
+    @property
+    def describe(self):
+        """Gets the describe of this PostAPPTemplete.  # noqa: E501
+
+
+        :return: The describe of this PostAPPTemplete.  # noqa: E501
+        :rtype: str
+        """
+        return self._describe
+
+    @describe.setter
+    def describe(self, describe):
+        """Sets the describe of this PostAPPTemplete.
+
+
+        :param describe: The describe of this PostAPPTemplete.  # noqa: E501
+        :type: str
+        """
+
+        self._describe = describe
 
     @property
     def details(self):
@@ -134,46 +202,25 @@ class PostAPPTemplete(object):
         self._details = details
 
     @property
-    def group_key(self):
-        """Gets the group_key of this PostAPPTemplete.  # noqa: E501
+    def dev_status(self):
+        """Gets the dev_status of this PostAPPTemplete.  # noqa: E501
 
 
-        :return: The group_key of this PostAPPTemplete.  # noqa: E501
+        :return: The dev_status of this PostAPPTemplete.  # noqa: E501
         :rtype: str
         """
-        return self._group_key
+        return self._dev_status
 
-    @group_key.setter
-    def group_key(self, group_key):
-        """Sets the group_key of this PostAPPTemplete.
+    @dev_status.setter
+    def dev_status(self, dev_status):
+        """Sets the dev_status of this PostAPPTemplete.
 
 
-        :param group_key: The group_key of this PostAPPTemplete.  # noqa: E501
+        :param dev_status: The dev_status of this PostAPPTemplete.  # noqa: E501
         :type: str
         """
 
-        self._group_key = group_key
-
-    @property
-    def group_share_alias(self):
-        """Gets the group_share_alias of this PostAPPTemplete.  # noqa: E501
-
-
-        :return: The group_share_alias of this PostAPPTemplete.  # noqa: E501
-        :rtype: str
-        """
-        return self._group_share_alias
-
-    @group_share_alias.setter
-    def group_share_alias(self, group_share_alias):
-        """Sets the group_share_alias of this PostAPPTemplete.
-
-
-        :param group_share_alias: The group_share_alias of this PostAPPTemplete.  # noqa: E501
-        :type: str
-        """
-
-        self._group_share_alias = group_share_alias
+        self._dev_status = dev_status
 
     @property
     def group_template(self):
@@ -323,25 +370,25 @@ class PostAPPTemplete(object):
         self._rainbond_version = rainbond_version
 
     @property
-    def share_type(self):
-        """Gets the share_type of this PostAPPTemplete.  # noqa: E501
+    def scope(self):
+        """Gets the scope of this PostAPPTemplete.  # noqa: E501
 
 
-        :return: The share_type of this PostAPPTemplete.  # noqa: E501
+        :return: The scope of this PostAPPTemplete.  # noqa: E501
         :rtype: str
         """
-        return self._share_type
+        return self._scope
 
-    @share_type.setter
-    def share_type(self, share_type):
-        """Sets the share_type of this PostAPPTemplete.
+    @scope.setter
+    def scope(self, scope):
+        """Sets the scope of this PostAPPTemplete.
 
 
-        :param share_type: The share_type of this PostAPPTemplete.  # noqa: E501
+        :param scope: The scope of this PostAPPTemplete.  # noqa: E501
         :type: str
         """
 
-        self._share_type = share_type
+        self._scope = scope
 
     @property
     def template_version(self):
@@ -384,27 +431,6 @@ class PostAPPTemplete(object):
         """
 
         self._tenant_id = tenant_id
-
-    @property
-    def update_note(self):
-        """Gets the update_note of this PostAPPTemplete.  # noqa: E501
-
-
-        :return: The update_note of this PostAPPTemplete.  # noqa: E501
-        :rtype: str
-        """
-        return self._update_note
-
-    @update_note.setter
-    def update_note(self, update_note):
-        """Sets the update_note of this PostAPPTemplete.
-
-
-        :param update_note: The update_note of this PostAPPTemplete.  # noqa: E501
-        :type: str
-        """
-
-        self._update_note = update_note
 
     def to_dict(self):
         """Returns the model properties as a dict"""

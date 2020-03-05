@@ -16,8 +16,10 @@ from __future__ import absolute_import
 import unittest
 
 import market_client
+from market_client import Configuration
 from market_client.models.market import Market  # noqa: E501
 from market_client.rest import ApiException
+from test import get_client
 
 
 class TestMarket(unittest.TestCase):
@@ -33,7 +35,9 @@ class TestMarket(unittest.TestCase):
         """Test Market"""
         # FIXME: construct object with mandatory attributes with example values
         # model = market_client.models.market.Market()  # noqa: E501
-        pass
+        client = get_client()
+        market_list = client.get_enterprise_market_list()
+        print(market_list)
 
 
 if __name__ == '__main__':

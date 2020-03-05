@@ -18,6 +18,7 @@ import unittest
 import market_client
 from market_client.models.app import App  # noqa: E501
 from market_client.rest import ApiException
+from test import get_client
 
 
 class TestApp(unittest.TestCase):
@@ -33,6 +34,8 @@ class TestApp(unittest.TestCase):
         """Test App"""
         # FIXME: construct object with mandatory attributes with example values
         # model = market_client.models.app.App()  # noqa: E501
+        client = get_client()
+        client.get_enterprise_market_app_and_version()
         pass
 
 
