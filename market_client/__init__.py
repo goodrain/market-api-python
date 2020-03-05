@@ -39,6 +39,8 @@ from market_client.models.order_state import OrderState
 from market_client.models.order_svc_provider import OrderSvcProvider
 from market_client.models.order_type import OrderType
 from market_client.models.post_app_templete import PostAPPTemplete
+from market_client.models.response_data import ResponseData
+from market_client.models.response_data_data import ResponseDataData
 from market_client.models.store_app import StoreApp
 from market_client.models.store_app_tag import StoreAppTag
 from market_client.models.store_app_version import StoreAppVersion

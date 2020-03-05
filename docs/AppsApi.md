@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_app_version**
-> StoreAppVersion create_app_version(market_id, app_id, data=data)
+> ResponseData create_app_version(market_id, app_id, data=data)
 
 
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoreAppVersion**](StoreAppVersion.md)
+[**ResponseData**](ResponseData.md)
 
 ### Authorization
 

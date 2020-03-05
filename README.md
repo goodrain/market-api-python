@@ -113,6 +113,8 @@ Class | Method | HTTP request | Description
  - [OrderSvcProvider](docs/OrderSvcProvider.md)
  - [OrderType](docs/OrderType.md)
  - [PostAPPTemplete](docs/PostAPPTemplete.md)
+ - [ResponseData](docs/ResponseData.md)
+ - [ResponseDataData](docs/ResponseDataData.md)
  - [StoreApp](docs/StoreApp.md)
  - [StoreAppTag](docs/StoreAppTag.md)
  - [StoreAppVersion](docs/StoreAppVersion.md)
