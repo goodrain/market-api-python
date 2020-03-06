@@ -16,9 +16,9 @@ from __future__ import absolute_import
 import unittest
 
 import market_client
+from market_client import Configuration
 from market_client.models.market import Market  # noqa: E501
 from market_client.rest import ApiException
-
 
 class TestMarket(unittest.TestCase):
     """Market unit test stubs"""
@@ -33,7 +33,19 @@ class TestMarket(unittest.TestCase):
         """Test Market"""
         # FIXME: construct object with mandatory attributes with example values
         # model = market_client.models.market.Market()  # noqa: E501
-        pass
+        configuration = Configuration()
+        configuration.host = "http://localhost:9000"
+        configuration.api_key['X_ENTERPRISE_TOKEN'] = "96dd084231efb23bf9ef162875f627f0"
+        configuration.api_key['X_ENTERPRISE_ID'] = "0e62be2210054eb5aae00637a2b301ed"
+        # create an instance of the API class
+        client = market_client.AppsApi(market_client.ApiClient(configuration))
+        data = {
+            "app_id":"app_id",
+            "":""
+        }
+        # resp = client.create_app("113139ca6c2b4377b9066574aac7dcd5", data=data)
+        resp = client.create_app_version("113139ca6c2b4377b9066574aac7dcd5", "app_id", data=data)
+        print(resp)
 
 
 if __name__ == '__main__':

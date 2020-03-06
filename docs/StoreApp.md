@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **create_time** | **datetime** |  | [optional] 
 **delivery_mode** | [**list[DeliveryMode]**](DeliveryMode.md) |  | [optional] 
 **desc** | **str** |  | [optional] 
+**dev_status** | **str** |  | [optional] 
 **download_count** | **int** |  | [optional] 
 **enterprise** | [**Enterprise**](Enterprise.md) |  | [optional] 
 **enterprise_id** | **str** |  | [optional] 

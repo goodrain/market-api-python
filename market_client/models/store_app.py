@@ -46,6 +46,7 @@ class StoreApp(object):
         'create_time': 'datetime',
         'delivery_mode': 'list[DeliveryMode]',
         'desc': 'str',
+        'dev_status': 'str',
         'download_count': 'int',
         'enterprise': 'Enterprise',
         'enterprise_id': 'str',
@@ -79,6 +80,7 @@ class StoreApp(object):
         'create_time': 'create_time',
         'delivery_mode': 'delivery_mode',
         'desc': 'desc',
+        'dev_status': 'dev_status',
         'download_count': 'download_count',
         'enterprise': 'enterprise',
         'enterprise_id': 'enterprise_id',
@@ -101,7 +103,7 @@ class StoreApp(object):
         'update_time': 'update_time'
     }
 
-    def __init__(self, app_detail_url=None, app_key_id=None, app_tag_ids=None, app_tags=None, app_type_id=None, app_versions=None, code_page=None, create_time=None, delivery_mode=None, desc=None, download_count=None, enterprise=None, enterprise_id=None, home_page=None, install_count=None, install_status=None, introduction=None, introduction_html=None, is_official=None, joint_cloud_id=None, logo=None, market_id=None, name=None, pic=None, price=None, publish_type=None, show_count=None, start_count=None, status=None, update_time=None):  # noqa: E501
+    def __init__(self, app_detail_url=None, app_key_id=None, app_tag_ids=None, app_tags=None, app_type_id=None, app_versions=None, code_page=None, create_time=None, delivery_mode=None, desc=None, dev_status=None, download_count=None, enterprise=None, enterprise_id=None, home_page=None, install_count=None, install_status=None, introduction=None, introduction_html=None, is_official=None, joint_cloud_id=None, logo=None, market_id=None, name=None, pic=None, price=None, publish_type=None, show_count=None, start_count=None, status=None, update_time=None):  # noqa: E501
         """StoreApp - a model defined in Swagger"""  # noqa: E501
 
         self._app_detail_url = None
@@ -114,6 +116,7 @@ class StoreApp(object):
         self._create_time = None
         self._delivery_mode = None
         self._desc = None
+        self._dev_status = None
         self._download_count = None
         self._enterprise = None
         self._enterprise_id = None
@@ -156,6 +159,8 @@ class StoreApp(object):
             self.delivery_mode = delivery_mode
         if desc is not None:
             self.desc = desc
+        if dev_status is not None:
+            self.dev_status = dev_status
         if download_count is not None:
             self.download_count = download_count
         if enterprise is not None:
@@ -406,6 +411,27 @@ class StoreApp(object):
         """
 
         self._desc = desc
+
+    @property
+    def dev_status(self):
+        """Gets the dev_status of this StoreApp.  # noqa: E501
+
+
+        :return: The dev_status of this StoreApp.  # noqa: E501
+        :rtype: str
+        """
+        return self._dev_status
+
+    @dev_status.setter
+    def dev_status(self, dev_status):
+        """Sets the dev_status of this StoreApp.
+
+
+        :param dev_status: The dev_status of this StoreApp.  # noqa: E501
+        :type: str
+        """
+
+        self._dev_status = dev_status
 
     @property
     def download_count(self):
