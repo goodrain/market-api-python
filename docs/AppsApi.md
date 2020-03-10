@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_app_versions**
-> StoreAppVersion get_app_versions(market_id, app_id)
+> StoreApp get_app_versions(market_id, app_id)
 
 
 
@@ -305,7 +305,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**StoreAppVersion**](StoreAppVersion.md)
+[**StoreApp**](StoreApp.md)
 
 ### Authorization
 

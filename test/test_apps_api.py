@@ -24,20 +24,71 @@ class TestAppsApi(unittest.TestCase):
     """AppsApi unit test stubs"""
 
     def setUp(self):
-        conf = market_client.Configuration()
-        conf.host = "http://market.goodrain.com"
-        client = market_client.ApiClient(configuration=conf)
-        self.api = market_client.api.apps_api.AppsApi(api_client=client)  # noqa: E501
+        self.api = market_client.api.apps_api.AppsApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
+    def test_create_app(self):
+        """Test case for create_app
+
+        """
+        pass
+
+    def test_create_app_version(self):
+        """Test case for create_app_version
+
+        """
+        pass
+
+    def test_download_app_by_order(self):
+        """Test case for download_app_by_order
+
+        """
+        pass
+
+    def test_get_app_version(self):
+        """Test case for get_app_version
+
+        """
+        pass
+
+    def test_get_app_versions(self):
+        """Test case for get_app_versions
+
+        """
+        pass
+
+    def test_get_app_with_version(self):
+        """Test case for get_app_with_version
+
+        """
+        pass
+
+    def test_get_apps_with_version(self):
+        """Test case for get_apps_with_version
+
+        """
+        pass
+
+    def test_get_market(self):
+        """Test case for get_market
+
+        """
+        pass
+
+    def test_get_markets(self):
+        """Test case for get_markets
+
+        """
+        pass
+
     def test_get_recommended_app_list(self):
         """Test case for get_recommended_app_list
- 
+
         get recommended app list  # noqa: E501
         """
-        self.api.get_recommended_app_list(page=1)
+        pass
 
 
 if __name__ == '__main__':

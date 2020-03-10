@@ -29,8 +29,8 @@ class TestOrdersApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_get_order_info(self):
-        """Test case for get_order_info
+    def test_get_order_request(self):
+        """Test case for get_order_request
 
         get order infos  # noqa: E501
         """
