@@ -473,7 +473,7 @@ class AppsApi(object):
         :param async_req bool
         :param str market_id: market id (required)
         :param str app_id: app id (required)
-        :return: StoreAppVersion
+        :return: StoreApp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -496,7 +496,7 @@ class AppsApi(object):
         :param async_req bool
         :param str market_id: market id (required)
         :param str app_id: app id (required)
-        :return: StoreAppVersion
+        :return: StoreApp
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -560,7 +560,7 @@ class AppsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='StoreAppVersion',  # noqa: E501
+            response_type='StoreApp',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
